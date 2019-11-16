@@ -93,8 +93,9 @@ hist(exp(betas[,2]), main="", xlab="broadband multiplier",
 	col=8, border="grey90", freq=FALSE)
 
 
+
 spendy <- glm( log(spend) ~ .-id, data=browser) 
-round(summary(spendy)$coef,2)
+round(summary(spendy)$coef)
 pval <- summary(spendy)$coef[-1,"Pr(>|t|)"]
 
 pdf("fig1.9.pdf", width=4, height=4)
